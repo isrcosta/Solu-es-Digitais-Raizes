@@ -1,0 +1,80 @@
+Características_da_Venda = ["Fornecedor", "Produto", "Unidade", "Valor", "Qtd", "Total", "Entregue", "Valor_Pago", "Comentarios", "Cliente", "Nucleo", "Data"]
+
+
+
+
+class Venda:
+    def __init__(self, Fornecedor, Produto, Unidade, Valor, Qtd, Total, Entregue, Valor_Pago, Comentarios, Cliente, Nucleo, Data):
+        self.Fornecedor = Fornecedor
+        self.Produto = Produto
+        self.Unidade = Unidade
+        self.Valor = Valor
+        self.Qtd = Qtd
+        self.Total = Total
+        self.Entregue = Entregue
+        self.Valor_Pago = Valor_Pago
+        self.Comentarios = Comentarios
+        self.Cliente = Cliente
+        self.Nucleo = Nucleo
+        self.Data = Data
+
+
+
+
+
+class Produto:
+    def __init__(self, Descricao, Tipo, Unidade, Categoria, Subcategoria, Fornecedor, Modelo, Tags, Codigo_de_Balanca, Codigo_Interno, Preco_Varejo, Preco_Atacado , Venda_Varejo, Venda_Atacado, Estoque, Fiscal, PDV):
+        self.Descricao = Descricao
+        self.Tipo = Tipo
+        self.Unidade = Unidade
+        self.Categoria = Categoria
+        self.Subcategoria = Subcategoria
+        self.Fornecedor = Fornecedor
+        self.Modelo = Modelo
+        self.Tags = Tags
+        self.Codigo_de_Balanca = Codigo_de_Balanca
+        self.Codigo_Interno = Codigo_Interno
+        self.Preco_Varejo = Preco_Varejo
+        self.Preco_Atacado = Preco_Atacado
+        self.Venda_Varejo = Venda_Varejo
+        self.Venda_Atacado = Venda_Atacado
+        self.Estoque = Estoque
+        self.Fiscal = Fiscal
+        self.PDV = PDV
+
+
+class Vendas2:
+    def __init__(self, Características):
+        self.Características = Características
+
+
+
+class Fornecedor:
+    def __init__(self, Nome):
+        self.Nome = Nome
+
+class Cliente:
+    def __init__(self, Nome):
+        self.Nome = Nome
+
+
+# def Listar_Vendas(vendas, Característica):
+#     Vendas_do_Tipo = []
+#     for venda in vendas:
+#         for Carac in Características_da_Venda:
+#             for item in venda.Características:
+#                 if venda.Características.item == Carac:
+#                     Vendas_do_Tipo.append(venda)
+
+
+
+def Listar_Vendas(vendas, parametro):
+    
+
+
+teste_1 = Vendas2(["fulano", "parada", 1000, 10, 5, 50, 50, "nem", "ciclano", "quarta", "20,03,2020" ])
+vendas_de_hoje = [teste_1]
+
+print(len(Listar_Vendas(vendas_de_hoje, "parada")))
+
+
